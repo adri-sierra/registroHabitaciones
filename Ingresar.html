@@ -5,25 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingresar</title>
+    <link rel="stylesheet" href="Ingreso/css/hotel1.css"/>
 </head>
 <body>
-    <h2>Log in</h2>
-    <form>
+    <style>
+        h1{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            color:#1bb010;
+            background-color: rgb(211, 181, 222);
+        }
+        form{
+            width: 350px;
+            padding: 60px;
+            border-radius: 10px;
+            background-color: rgb(113, 181, 220);
+        }
         
-        Usuario:<br>
-        Clave: <input type="text" name="contrasena" 
-    <p>
-        <input type="checkbox" name="condiciones"/>
-        Declaro haber leido y acepto las condiciones
-        y la normativa sobre la protección de datos
-        personales (Ley 1581 de 2012)
+        button{
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="hotel.css">
+
+</head>
+<body>
+    <h1>Registro Usuarios</h1>
+    
+    <form
+        action=""
+        name="formRegistro"
+        method="get"
+        onsubmit="validar_formulario()"
+
+    
+    >
+        Usuario: <input id="usuario" type="text" 
+        name="nombre"
+        onfocus="cambiarFondo()"></p>
+      
+
+       <p>Registrarse:<input id="registrarse" type="radio" name="registrarse" value="usuario nuevo"/>Usuario Nuevo</p>
+       <p>Correo:<input id="correo" type="text" name="correo"></p>
+        <p>
+            Contraseña:<input id="contrasena" type="password" name="contrasena"></p>
+            <img src="images/view.png" alt=""
+            onmouseover="mostrarPassword"
+            onmouseover="ocultarPassword">
     </p>
-
-    <button type="submit" value="Ingresar">Ingresar
-
-    </button>
-        
-</form>
+        <p> 
+            <input id="condiciones" type="checkbox" name="condiciones"/>
+            Declaro haber leido y acepto las condiciones generales 
+            del programa y la normativa sobre protección de datos.
+        </p>
+        <button type="submit" value="Ingresar"> Ingresar</button>
+        <h1 id="res"></h1>
+    </form>
     
 </body>
 </html>
